@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import firebaseContext from "@/context/firebase/firebaseContext";
+import firebaseContext from "../context/firebase/firebaseContext";
 import {
   NativeBaseProvider,
   Spacer,
@@ -11,9 +11,9 @@ import {
   Text,
   
 } from "native-base";
-import globalStyles from "@/styles/global";
+import globalStyles from "../styles/global";
 import { StyleSheet, TouchableWithoutFeedback } from "react-native";
-import PedidoContext from "@/context/pedidos/pedidosContext";
+import PedidoContext from "../context/pedidos/pedidosContext";
 
 import { useNavigation } from "@react-navigation/native";
 

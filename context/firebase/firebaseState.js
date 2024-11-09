@@ -5,7 +5,7 @@ import firebaseContext from "./firebaseContext";
 
 import firebase from "../../firebase";
 
-import { OBTENER_PRODUCTOS_EXITO } from "@/types";
+import { OBTENER_PRODUCTOS_EXITO } from "../../types";
 
 import _ from 'lodash';
 

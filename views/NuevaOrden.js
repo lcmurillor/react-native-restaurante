@@ -1,7 +1,7 @@
 import React from "react";
 
 import { View, StyleSheet, TouchableHighlight, Text } from "react-native";
-import globalStyles from "@/styles/global";
+import globalStyles from "../styles/global";
 import { useNavigation } from "@react-navigation/native";
 
 const NuevaOrden = () => {

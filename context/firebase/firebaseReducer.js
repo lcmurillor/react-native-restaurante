@@ -1,4 +1,4 @@
-import { OBTENER_PRODUCTOS_EXITO } from "@/types";
+import { OBTENER_PRODUCTOS_EXITO } from "../../types";
 
 export default (state, action)=>{
     switch (action.type) {

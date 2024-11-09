@@ -27,6 +27,7 @@ const globalStyles = StyleSheet.create({
         width: '100%'
     },
     cantidad: {
+        paddingVertical: 15,
         marginVertical: 20,
         textAlign: 'center',
         fontSize: 24,
