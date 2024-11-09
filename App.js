@@ -48,7 +48,7 @@ export default function App() {
                 component={Menu}
                 options={{
                   title: "Nuestro Menú",
-                  headerRight: (props) => <BotonResumen />,
+                  // headerRight: (props) => <BotonResumen />,
                 }}
               />
 

@@ -5,22 +5,54 @@ import firebaseContext from "./firebaseContext";
 
 import firebase from "../../firebase";
 
+import { OBTENER_PRODUCTOS_EXITO } from "@/types";
+
+import _ from 'lodash';
+
 const FirebaseState = (props) => {
 
 
   //Crear state inicial
   const inicialState = {
-    menu: [],
+    menu: []
     
   };
   //use Reducer
   const [state, dispatch] = useReducer(firebaseReducer, inicialState);
 
+  //fUNCION PARA traer produtos
+  const obtenerProductos = ()=>{
+    
+
+
+    //consultar firebase
+    firebase.db.collection('productos').where('existencia','==' ,true).onSnapshot(manejarSnapshot);
+
+    function manejarSnapshot(snapshot) {
+      let platillos = snapshot.docs.map(doc =>{
+        return{
+          id: doc.id,
+          ...doc.data()
+        }
+      });
+
+      platillos = _.sortBy(platillos, 'categoria')
+      // Resultado 
+      dispatch({
+        type:OBTENER_PRODUCTOS_EXITO,
+        payload: platillos
+      });
+      
+    }
+    
+  }
+
   return (
     <firebaseContext.Provider
       value={{
         menu: state.menu,
-        firebase
+        firebase, 
+        obtenerProductos
       }}
     >
       {props.children}
