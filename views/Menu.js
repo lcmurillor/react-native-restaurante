@@ -8,8 +8,7 @@ import {
   Image,
   FlatList,
   VStack,
-  Text,
-  
+  Text
 } from "native-base";
 import globalStyles from "../styles/global";
 import { StyleSheet, TouchableWithoutFeedback } from "react-native";
@@ -73,7 +72,7 @@ const Menu = () => {
                     {item.descripcion}
                   </Text>
                   <Text fontSize="xs" bold>
-                    Precio: ${item.precio}
+                    Precio: CRC{item.precio}
                   </Text>
                 </VStack>
                 <Spacer />

@@ -15,6 +15,8 @@ import ProgresoPedido from "./views/ProgresoPedido";
 import FirebaseState from "./context/firebase/firebaseState";
 import PedidoState from "./context/pedidos/pedidosState";
 
+import BotonResumen from './components/ui/BotonResumen'
+
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -48,7 +50,7 @@ export default function App() {
                 component={Menu}
                 options={{
                   title: "Nuestro Menú",
-                  // headerRight: (props) => <BotonResumen />,
+                  headerRight: (props) => <BotonResumen />,
                 }}
               />
 

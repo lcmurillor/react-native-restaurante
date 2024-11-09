@@ -85,7 +85,7 @@ const ResumenPedido = () => {
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => (
             <Box borderBottomWidth={1} borderColor="coolGray.200" py={2}>
-              <HStack space={3} alignItems="center">
+              <HStack space={4} alignItems="center">
                 <Image
                   source={{ uri: item.imagen }}
                   alt={item.nombre}
@@ -99,9 +99,9 @@ const ResumenPedido = () => {
                     onPress={() => confirmarEliminacion(item.id)}
                     mt={3}
                     colorScheme="danger"
-                    size="sm"
+                    style = {{width: "100%"}}
                   >
-                    <Text color="white">Eliminar</Text>
+                    <Text style={[globalStyles.botonTexto, { color: '#FFF' }]}>Eliminar</Text>
                   </Button>
                 </VStack>
               </HStack>
@@ -114,7 +114,7 @@ const ResumenPedido = () => {
         <Button
           onPress={() => navigation.navigate('Menu')}
           mt={6}
-          colorScheme="dark"
+          style = {{backgroundColor:'#000'}}
         >
           <Text style={[globalStyles.botonTexto, { color: '#FFF' }]}>Seguir Pidiendo</Text>
         </Button>
@@ -122,7 +122,7 @@ const ResumenPedido = () => {
         <Button
           onPress={progresoPedido}
           mt={4}
-          colorScheme="primary"
+          style={globalStyles.boton} 
         >
           <Text style={globalStyles.botonTexto}>Ordenar Pedido</Text>
         </Button>

@@ -6,7 +6,7 @@ import {
   Text,
   Heading,
   NativeBaseProvider,
-  VStack,
+  VStack
 } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 import globalStyles from "../styles/global";
